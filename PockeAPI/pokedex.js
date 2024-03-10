@@ -1,24 +1,22 @@
 const list$$ = document.querySelector('#pokedex')
 const bttn$$ = document.querySelectorAll('.b-bttn--type');
-//console.log(list$$)
 
-const urlBase = 'https://pokeapi.co/api/v2/pokemon?limit=150';
+const urlBase = 'https://pokeapi.co/api/v2/pokemon';
 
-//const urlbasse = 'https://pokeapi.co/api/v2/pokemon';
+const cargarDatos= async (endpoint)=> {
 
- const cargarDatos= async (endpoint)=> {
-
-   const arrayPokemons = []; 
-   
-    const response = await fetch(endpoint, { method: 'GET' });
-    const data = await response.json();
-
-    for (const element of data.results) {
-        const response = await fetch(element.url, { method: 'GET' })
-        const pokemon = await response.json()
-        arrayPokemons.push(pokemon)
-        //console.log(pokemon)
+    const arrayPokemons = []
+    
+    for (let i = 1; i <= 150; i++){
+    
+        const urlsObjetos = `${endpoint}/${[i]}`;
+        const response = await fetch(urlsObjetos, { method: 'GET' });
+        const data = await response.json();
+        arrayPokemons.push(data)
+       
     }
+     
+    console.log(arrayPokemons)
     
     return arrayPokemons
 }
@@ -70,7 +68,7 @@ const pintarPokemons =(arraryNomap, elementDom) =>{
 }
 
 const mostrarTipos = (arrayFiltar) => {
-    console.log(arrayFiltar);
+   // console.log(arrayFiltar);
 
         for (let bttn of bttn$$) {
             //console.log(bttn)
@@ -84,15 +82,23 @@ const mostrarTipos = (arrayFiltar) => {
         } 
 
     }
+const reload = () => {
 
-const init = async() => {
+    location.reload();
 
+}
+
+const init = async () => {
+    
     const cargarDAtos = await cargarDatos(urlBase); //todo el arrary
     pintarPokemons(cargarDAtos, list$$);
     mostrarTipos(cargarDAtos);
     
 }
 
-init()
+setTimeout(() => {
+   init() 
+},1000)
+
 
 
