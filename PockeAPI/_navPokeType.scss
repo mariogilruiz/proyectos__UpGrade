@@ -1,0 +1,39 @@
+.nav{
+    margin-top: 150px;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin-bottom: 0px;
+
+    &__ul{
+
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+
+        &__li{
+
+            height: 50px;
+            width: 150px;
+            margin: 20px 25px;
+
+            button{
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                background-color:#ffd42a ;
+                outline: 8px solid #3a5ba7;
+                border: 0px;
+                box-shadow: 0px 0px 15px black;
+                font-family:sans-serif;
+                font-weight: bolder;
+                color: white;
+                // letter-spacing: 3px;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}

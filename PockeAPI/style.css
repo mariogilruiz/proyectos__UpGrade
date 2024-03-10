@@ -1,0 +1,139 @@
+.figure {
+  position: relative;
+  height: 420px;
+  width: 300px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 5px solid #3a5ba7;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  margin: 35px 20px;
+  box-shadow: 0px 0px 5px black;
+}
+.figure__div {
+  height: 300px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(195, 199, 199);
+  margin-top: 10px;
+  border-radius: 7px;
+  transition: 700ms ease;
+}
+.figure__div__img {
+  height: 60%;
+  width: 80%;
+  max-width: 100%;
+  transition: 200ms ease;
+}
+.figure__div:hover {
+  background-color: #434343;
+}
+.figure__div:hover img {
+  transform: scale(1.1);
+}
+.figure__h2 {
+  margin-top: 20px;
+  font-family: var(--font-pokemon);
+  font-size: 30px;
+  color: #c59f07;
+  letter-spacing: 3px;
+}
+.figure__h3 {
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+  background-color: #434343;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  border-radius: 10px;
+  text-transform: uppercase;
+  color: #e9e9e9;
+}
+.figure__h3--number {
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
+@font-face {
+  font-family: "pokemon";
+  src: url(./fonts/pokemonsolid.ttf);
+}
+:root {
+  --font-pokemon:"pokemon",Arial,Helvetica,sans-serif;
+}
+
+.nav {
+  margin-top: 150px;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+.nav__ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+}
+.nav__ul__li {
+  height: 50px;
+  width: 150px;
+  margin: 20px 25px;
+}
+.nav__ul__li button {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #ffd42a;
+  outline: 8px solid #3a5ba7;
+  border: 0px;
+  box-shadow: 0px 0px 15px black;
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-image: url(./image/fondo-pokemon.jpg);
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+.container__h1 {
+  position: relative;
+  width: 70%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.container__h1__img {
+  height: 300px;
+}
+.container__ol {
+  margin-top: 100px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+}/*# sourceMappingURL=style.css.map */

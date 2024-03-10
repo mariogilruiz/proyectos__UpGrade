@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "pokemon";
+  src: url(./fonts/pokemonsolid.ttf);
+}
+:root {
+  --font-pokemon:"pokemon",Arial,Helvetica,sans-serif;
+}/*# sourceMappingURL=fonts.css.map */

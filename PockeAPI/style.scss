@@ -1,0 +1,48 @@
+@import './card__pokemon';
+@import './fonts';
+@import './navPokeType';
+
+
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+flex-wrap: wrap;
+width: 100%;
+height: 100%;
+background-image: url(./image/fondo-pokemon.jpg);
+background-repeat: repeat-y;
+background-size: 100%;
+
+
+
+    &__h1{
+    position: relative;
+    width: 70%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    
+
+        &__img{
+            height: 300px; 
+        }
+
+    }
+
+    &__ol{
+        margin-top: 100px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 100px;
+      
+        
+    }
+}
+
